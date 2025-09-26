@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Task - Task Manager</title>
+  <link rel="stylesheet" href="/clientside/css/add.css">
+</head>
+<body>
+ 
+  <header>
+    <h1>Task Manager</h1>
+    <a href="/"><button>Back to Tasks</button></a>
+  </header>
+
+ 
+  <main>
+    <div class="form-container">
+      <h2>Add New Task</h2>
+      <form action="http://localhost:3008/addTask" method="POST">
+        <div class="form-group">
+          <label for="title">Task Title</label>
+          <input type="text" id="title" name="title" placeholder="Enter task title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" placeholder="Enter task description" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dueDate">Due Date</label>
+          <input type="date" id="dueDate" name="dueDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" name="status" required>
+            <option value="pending" selected>Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Add Task</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
